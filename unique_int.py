@@ -7,16 +7,14 @@ MIN_INT = -2**64 + 1
 # Function to check if a line contains a valid integer within the defined range
 def is_valid_integer(value):
     try:
-        # Convert the value to an integer after stripping whitespaces
         num = int(value.strip())
         # Check if the integer is within the 64-bit range
         if MIN_INT <= num <= MAX_INT:
             return num
         else:
-            return None  # Return None if it's out of bounds
+            return None  
     except ValueError:
-        return None  # Return None if it's not a valid integer
-
+        return None  
 # This function processes the input file and generates the result file
 # It uses the function is_valid_integer to check if each line has a valid integer
 def process_file(input_file_path, output_file_path):
